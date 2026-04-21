@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevBug | Portfolio Zine</title>
+  <meta name="description" content="Portfolio de DevBug — Escaparate de proyectos web y herramientas de desarrollo.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; media-src 'none'; upgrade-insecure-requests; block-all-mixed-content">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=(), usb=()">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Special+Elite&family=Inter:wght@400;600;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- SVG Filtro borde rasgado -->
+  <svg width="0" height="0" class="svg-defs-hidden">
+    <defs>
+      <filter id="paper-edge">
+        <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+      <filter id="paper-edge-soft">
+        <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+  <!-- Ruido de fondo -->
+  <div class="bg-noise" aria-hidden="true"></div>
+  <div class="bg-dots" aria-hidden="true"></div>
+
+  <!-- NAV cinta adhesiva -->
+  <nav class="nav-tape-bar">
+    <a href="https://github.com/DevBug201" target="_blank" rel="noopener noreferrer" class="nav-item">// GITHUB</a>
+    <a href="#terminal" class="nav-item">// PERFIL</a>
+  </nav>
+
+  <main>
+
+    <!-- ========== HERO BANNER (réplica del cartel) ========== -->
+    <section class="hero-banner">
+      <!-- Collage de fondo: solo centro conservado si hubiera, se borran siluetas -->
+      <div class="collage-layer" aria-hidden="true">
+      </div>
+
+      <div class="hero-center">
+        <!-- Título: cada letra en su recorte -->
+        <h1 class="logo-letters">
+          <span class="ll ll-D">D</span><span class="ll ll-e">e</span><span class="ll ll-v">v</span><span class="ll ll-B">B</span><span class="ll ll-u">u</span><span class="ll ll-g">g</span>
+        </h1>
+
+        <!-- Subtítulo -->
+        <div class="subtitle-ribbon">
+          <span>-Futuro Fullstack Dev - DevOps</span>
+        </div>
+
+        <!-- Certificaciones en filas centradas -->
+        <div class="certs-block">
+          <div class="cert-row">
+            <span class="cb">SMR <i class="cdot green"></i></span>
+            <span class="cb">DAW <i class="cdot yellow"></i></span>
+            <span class="cb">DPSC <i class="cdot red"></i></span>
+          </div>
+          <div class="cert-row">
+            <span class="cb">GitHub Foundations <i class="cdot red"></i></span>
+            <span class="cb">GitHub Actions <i class="cdot red"></i></span>
+            <span class="cb">AWS CCP <i class="cdot red"></i></span>
+          </div>
+          <div class="cert-row">
+            <span class="cb">AWS DVA <i class="cdot red"></i></span>
+            <span class="cb">Docker (DCA) <i class="cdot red"></i></span>
+            <span class="cb">LPIC-1 <i class="cdot red"></i></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROYECTOS ========== -->
+    <section class="projects-zone">
+
+      <!-- 01 DEVBLOG -->
+      <article class="card card-main">
+        <div class="tape tape-tl"></div>
+        <div class="tape tape-br"></div>
+        <div class="card-inner">
+          <div class="card-mockup devblog-preview">
+            <img
+              class="devblog-shot"
+              src="./projects/img/proyecto%2001.png"
+              alt="Vista del proyecto DevBlog"
+            >
+          </div>
+          <a href="https://devbug201.github.io/devblog/" target="_blank" rel="noopener noreferrer" class="card-btn card-btn-mobile">VER_PROYECTO ↗</a>
+          <div class="card-text">
+            <h2 class="card-title">DEVBLOG</h2>
+            <p class="card-desc">Portal de noticias sobre ciberseguridad, inteligencia artificial y tecnologia critica.</p>
+            <div class="card-tags">
+              <span class="ctag t-html">HTML</span>
+              <span class="ctag t-css">CSS</span>
+              <span class="ctag t-js">JS</span>
+            </div>
+            <a href="https://devbug201.github.io/devblog/" target="_blank" rel="noopener noreferrer" class="card-btn">VER_PROYECTO ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 02 Proximo proyecto -->
+      <article class="card card-sm card-upcoming">
+        <div class="tape tape-tc"></div>
+        <div class="card-inner">
+          <div class="card-text-sm">
+            <h3 class="card-title card-title-sm">PROXIMAMENTE</h3>
+            <p class="card-desc">Nuevo proyecto en preparacion. Estara disponible aqui cuando este listo para publicarse.</p>
+            <div class="card-tags">
+              <span class="ctag t-js">EN CURSO</span>
+              <span class="ctag t-css">PROYECTO 02</span>
+            </div>
+            <span class="card-btn card-btn-disabled card-btn-sm">PROXIMAMENTE</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 03 Proximo proyecto -->
+      <article class="card card-sm card-sticky">
+        <div class="tape tape-tr"></div>
+        <div class="card-inner">
+          <div class="card-text-sm">
+            <h3 class="card-title card-title-sm">PROXIMAMENTE</h3>
+            <p class="card-desc">Otro proyecto en camino. Pronto publicare mas codigo.</p>
+            <div class="card-tags">
+              <span class="ctag t-js">EN CURSO</span>
+              <span class="ctag t-css">PROYECTO 03</span>
+            </div>
+            <span class="card-btn card-btn-disabled card-btn-sm">PROXIMAMENTE</span>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- ========== TERMINAL INTERACTIVA (post-it style) ========== -->
+    <section class="terminal-section" id="terminal">
+      <div class="tape tape-tl"></div>
+      <div class="tape tape-br"></div>
+      <div class="terminal-header">
+        <span class="th-text"># WHOAMI</span>
+      </div>
+      <div class="terminal-screen">
+        <div class="term-head">root@devbug:~</div>
+        <div class="term-body" id="termBody">
+          <div class="term-line">
+            <span class="prompt">$</span>
+            <span class="term-hint">Escribe un comando: help, perfil, formacion, exp, certs, stack, all</span>
+          </div>
+        </div>
+        <div class="term-input-row">
+          <span class="prompt">$</span>
+          <div class="term-input-wrap">
+            <span class="term-mirror" id="termMirror" aria-hidden="true"></span>
+            <span class="term-cursor" id="termCursor" aria-hidden="true"></span>
+            <input type="text" id="termInput" class="term-input" placeholder="Comando..." spellcheck="false" autocomplete="off">
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="zine-footer">
+    <p>DEVBUG © 2026 // <a href="https://github.com/DevBug201" target="_blank" rel="noopener noreferrer">GITHUB</a></p>
+  </footer>
+
+  <script src="./app.js" defer></script>
+
+</body>
+</html>
