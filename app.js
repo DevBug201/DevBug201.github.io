@@ -1,4 +1,3 @@
-// Terminal interactiva
 const commands = {
   help: [
     '> Comandos disponibles:',
