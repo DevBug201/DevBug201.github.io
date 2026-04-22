@@ -7,7 +7,7 @@
 <h2 align="center">━━━&nbsp;&nbsp;SOBRE EL PROYECTO&nbsp;&nbsp;━━━</h2>
 
 <p align="center">
-  <code>Portfolio público de <strong>DevBug201</strong> en GitHub Pages.</code><br>
+  <code>Portfolio en GitHub Pages.</code><br>
   <code>Funciona como hub principal para mostrar proyectos y redirigir</code><br>
   <code>a cada sitio publicado, incluyendo <strong>DevBlog</strong>.</code>
 </p>

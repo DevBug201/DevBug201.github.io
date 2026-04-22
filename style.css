@@ -1,6 +1,3 @@
-/* ============================================
-   DEVBUG PORTFOLIO — ZINE / COLLAGE FINAL
-   ============================================ */
 :root {
   --black: #0d0d0d;
   --black2: #1a1a1a;
@@ -21,7 +18,6 @@ body { background: var(--black); color: var(--white); font-family: var(--font); 
 a { text-decoration: none; color: inherit; }
 .svg-defs-hidden { position: absolute; width: 0; height: 0; }
 
-/* Texturas globales */
 .bg-noise {
   position: fixed; inset: 0; z-index: -2; pointer-events: none;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
@@ -32,7 +28,6 @@ a { text-decoration: none; color: inherit; }
   background-size: 10px 10px;
 }
 
-/* ---- NAV ---- */
 .nav-tape-bar {
   position: fixed; top: 20px; right: 20px; z-index: 100;
   padding: 12px 24px;
@@ -49,7 +44,6 @@ a { text-decoration: none; color: inherit; }
 }
 .nav-item:hover { color: var(--red); }
 
-/* ---- CINTA ADHESIVA ---- */
 .tape {
   position: absolute; z-index: 20; pointer-events: none;
   background: rgba(244,240,234,0.35);
@@ -61,9 +55,6 @@ a { text-decoration: none; color: inherit; }
 .tape-tc { top: -10px; left: 50%; transform: translateX(-50%) rotate(4deg); }
 .tape-tr { top: -8px; right: 15px; transform: rotate(18deg); }
 
-/* ============================================
-   HERO BANNER — réplica fiel del cartel
-   ============================================ */
 .hero-banner {
   position: relative;
   max-width: 1200px;
@@ -72,7 +63,6 @@ a { text-decoration: none; color: inherit; }
   overflow: hidden;
 }
 
-/* Collage de fondo */
 .collage-layer { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
 .collage-layer > div { position: absolute; }
 
@@ -114,14 +104,12 @@ a { text-decoration: none; color: inherit; }
   opacity: 0.7;
 }
 
-/* Centro del hero */
 .hero-center {
   position: relative; z-index: 2;
   display: flex; flex-direction: column; align-items: center;
   text-align: center;
 }
 
-/* Letras recortadas: Etiquetas blancas rasgadas */
 .logo-letters {
   display: flex; align-items: baseline; justify-content: center; flex-wrap: nowrap;
   margin-bottom: 12px; gap: 2px; width: 100%;
@@ -135,7 +123,7 @@ a { text-decoration: none; color: inherit; }
   -webkit-text-stroke: 2px #000;
   text-shadow: 3px 3px 0 #000;
   position: relative;
-  margin-left: 5px; /* Más espacio entre letras para legibilidad */
+  margin-left: 5px;
   padding: 5px 15px;
   filter: url(#paper-edge-soft);
   z-index: 1;
@@ -148,7 +136,6 @@ a { text-decoration: none; color: inherit; }
   filter: url(#paper-edge) drop-shadow(4px 4px 0 rgba(0,0,0,0.8));
   z-index: -1;
 }
-/* Desorden pero muy sutil para máxima legibilidad */
 .ll-D { transform: rotate(-2deg); z-index: 3; margin-left: 0; }
 .ll-e { transform: rotate(1deg) translateY(2px); z-index: 1; }
 .ll-v { transform: rotate(-1deg) translateY(1px); z-index: 2; }
@@ -156,7 +143,6 @@ a { text-decoration: none; color: inherit; }
 .ll-u { transform: rotate(-1deg) translateY(2px); z-index: 1; }
 .ll-g { transform: rotate(1deg) translateY(0px); z-index: 2; }
 
-/* Subtítulo - cinta blanca */
 .subtitle-ribbon {
   background: var(--white); color: var(--black);
   padding: 6px 28px;
@@ -167,13 +153,12 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 20px;
 }
 
-/* Certificaciones caóticas distribuidas mejor */
 .certs-block {
   display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; max-width: 800px;
   margin-top: 15px;
 }
 .cert-row {
-  display: contents; /* Permitimos que colapsen en el bloque padre */
+  display: contents;
 }
 .cb {
   color: var(--black);
@@ -227,9 +212,6 @@ a { text-decoration: none; color: inherit; }
 .cdot.yellow { background: var(--yellow); }
 .cdot.red { background: var(--red); }
 
-/* ============================================
-   PROYECTOS
-   ============================================ */
 .projects-zone {
   max-width: 900px; margin: 20px auto 0; padding: 0 20px;
   display: grid;
@@ -238,7 +220,6 @@ a { text-decoration: none; color: inherit; }
   column-gap: 30px;
 }
 
-/* Tarjeta base */
 .card { position: relative; }
 .card-inner {
   color: var(--black);
@@ -252,7 +233,6 @@ a { text-decoration: none; color: inherit; }
 }
 .card:hover .card-inner { transform: scale(1.015) rotate(0.5deg); }
 
-/* 01 DevBlog — ocupa izquierda + 2 filas */
 .card-main {
   grid-column: 1 / span 2;
   transform: rotate(-1deg);
@@ -261,7 +241,6 @@ a { text-decoration: none; color: inherit; }
   display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
 }
 
-/* Mockup navegador */
 .card-mockup {
   border: 3px solid var(--black); background: #ddd;
   transform: rotate(1deg);
@@ -271,7 +250,7 @@ a { text-decoration: none; color: inherit; }
   padding: 10px;
   box-shadow: inset 0 0 0 2px #000;
   position: relative;
-  height: 220px; /* Mantener tamaño del bloque como antes */
+  height: 220px;
   overflow: hidden;
   filter: url(#paper-edge-soft);
 }
@@ -385,7 +364,6 @@ a { text-decoration: none; color: inherit; }
   color: #000;
 }
 
-/* Texto tarjeta */
 .card-text { display: flex; flex-direction: column; justify-content: center; position: relative; }
 .card-num { display: none; }
 .card-title { font-family: var(--marker); font-size: 3rem; text-transform: uppercase; line-height: 1; margin-bottom: 10px; }
@@ -438,14 +416,10 @@ a { text-decoration: none; color: inherit; }
   margin-top: 10px;
 }
 
-/* Upcoming cards */
 .card-sm h3 { font-family: var(--type); font-size: 1.5rem; margin: 8px 0; }
 .card-sm p { font-weight: 600; font-size: 0.9rem; }
 
-/* card-text-sm: texto dentro del proyecto 02 */
 .card-text-sm { display: flex; flex-direction: column; justify-content: center; }
-
-/* card-upcoming ahora tiene layout flex columnar */
 .card-upcoming .card-inner {
   display: flex; flex-direction: column; gap: 16px;
 }
@@ -468,9 +442,6 @@ a { text-decoration: none; color: inherit; }
 }
 .card-sticky .card-num { opacity: 0.3; color: #000; }
 
-/* ============================================
-   TERMINAL INTERACTIVA (estilo post-it)
-   ============================================ */
 .terminal-section {
   position: relative;
   max-width: 900px; margin: 80px auto 0; padding: 0 20px;
@@ -541,7 +512,7 @@ a { text-decoration: none; color: inherit; }
   background: transparent; border: none; outline: none;
   font-family: var(--mono); font-size: 1rem; font-weight: 700;
   color: var(--white);
-  caret-color: transparent; /* Usamos cursor CSS personalizado */
+  caret-color: transparent;
 }
 .term-mirror {
   position: absolute;
@@ -580,7 +551,6 @@ a { text-decoration: none; color: inherit; }
   50% { opacity: 0; }
 }
 
-/* ---- FOOTER ---- */
 .zine-footer {
   padding: 40px 20px; text-align: center;
   font-family: var(--type); font-size: 1.1rem; font-weight: 700;
@@ -589,9 +559,6 @@ a { text-decoration: none; color: inherit; }
 }
 .zine-footer a { color: var(--red); text-decoration: underline; }
 
-/* ---- RESPONSIVE ---- */
-
-/* Tablet grande */
 @media (max-width: 900px) {
   .projects-zone {
     grid-template-columns: 1fr;
@@ -604,17 +571,14 @@ a { text-decoration: none; color: inherit; }
   .certs-block { padding: 0 10px; }
 }
 
-/* Tablet pequeña */
 @media (max-width: 768px) {
   .hero-banner { margin-top: 70px; padding: 30px 15px 25px; }
   .subtitle-ribbon { font-size: clamp(1.3rem, 4vw, 1.8rem); }
-  /* card-upcoming también en columna */
   .card-upcoming .card-inner {
     display: flex;
     flex-direction: column;
     gap: 16px;
   }
-  /* Imagen del proyecto DEBAJO del texto en móvil/tablet pequeña */
   .card-main .card-inner {
     display: flex;
     flex-direction: column;
@@ -627,7 +591,6 @@ a { text-decoration: none; color: inherit; }
   .card-btn { order: 3; align-self: flex-start; }
 }
 
-/* Mobile */
 @media (max-width: 600px) {
   .nav-tape-bar { top: 10px; right: 10px; padding: 8px 14px; gap: 12px; }
   .nav-item { font-size: 0.85rem; }
