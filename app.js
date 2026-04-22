@@ -128,5 +128,4 @@ if (terminalScreen) terminalScreen.addEventListener('click', () => termInput.foc
 if (termInputRow) termInputRow.addEventListener('click', () => termInput.focus());
 
 addLines(commands.help, 'help');
-termInput.focus({ preventScroll: true });
 updateCursorPosition();
